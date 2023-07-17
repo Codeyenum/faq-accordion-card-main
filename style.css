@@ -1,0 +1,139 @@
+:root {
+    /* ### colors ### */
+    /*  ## key ##
+        s - soft
+        d - dark
+        vd - very dark 
+    */
+
+    /* Primary */
+    --text-vd-blue: rgb(29, 30, 53);
+    --text-s-red: hsl(14, 88%, 65%);
+
+    /* Gradient */
+    --bg-s-violet: hsl(273, 75%, 66%);
+    --bg-s-blue: hsl(240, 73%, 65%);
+
+    /* Neutral */
+    --text-vd-gray-blue: rgb(74, 75, 94);
+    --text-d-gray-blue: rgb(120, 120, 135);
+
+    /* Dividers */
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));            
+    font-family: 'Kumbh Sans', sans-serif;    
+    min-height: 100vh;    
+}
+
+main {
+    width: 100%;
+    padding: 10rem 1.5rem 5rem;
+}
+
+.accordion-component {
+    background-color: #fff;
+    border-radius: 25px;
+    position: relative; 
+
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;     
+}
+
+.hero-img, .hero-img-shadow {    
+    padding: 3em;
+    width: 335px;  
+
+    position: absolute;    
+    left: 50%;
+    transform: translateX(-50%);      
+}
+
+.hero-img {
+    top: -9.75rem;
+}
+
+.hero-img-shadow {
+    top: -3.25rem;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 1rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.accordion-wrapper {
+    margin: 1rem 0 3.25rem;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    padding: 1rem 0;
+}
+
+.accordion-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-header:hover h3 {
+    color: var(--text-s-red);
+}
+
+h3 {    
+    color: var(--text-vd-blue);
+    font-size: .9rem;
+    font-weight: 400;    
+}
+
+.accordion-icon {
+    align-self: center;
+}
+
+.panel {
+    color: var(--text-d-gray-blue);
+    font-size: .8rem;
+    line-height: 1.25rem;    
+    padding-right: 1.5rem;
+    margin-top: .5rem;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s ease-in;
+}
+
+h3.selected {
+    font-weight: 700;
+}
+
+.accordion-icon.selected {
+    transform: rotate(180deg);
+}
+
+.accordion-header:hover h3.selected {
+    color: var(--text-vd-blue);
+}
+
+.panel.selected {    
+    display: block;
+    max-height: 100%;    
+}
