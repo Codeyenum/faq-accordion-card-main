@@ -115,7 +115,7 @@ h3 {
     line-height: 1.25rem;    
     padding-right: 1.5rem;
     margin-top: .5rem;
-    display: none;
+    display: block;
     overflow: hidden;
     max-height: 0;
     transition: all 0.4s ease-in;
@@ -131,9 +131,4 @@ h3.selected {
 
 .accordion-header:hover h3.selected {
     color: var(--text-vd-blue);
-}
-
-.panel.selected {    
-    display: block;
-    max-height: 100%;    
 }
